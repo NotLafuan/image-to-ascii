@@ -65,7 +65,7 @@ def image_to_ascii(image: cv2.Mat):
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
     for row in gray:
         for pixel in row:
-            palette_index = round(map(pixel, 0, 255, 0, 23))
+            palette_index = round(map(pixel, 0, 255, 0, 22))
             text += ascii_palette[palette_index]
         text += '\n'
     return text[:-1]
